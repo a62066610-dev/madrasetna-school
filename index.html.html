@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مدرسة الشعراوي - جداول الفصول</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>🏫 مدرسة الشعراوي</h1>
+    <p>نظام جداول الفصول - 7 حصص</p>
+  </div>
+  <div>
+    <button id="adminBtn">دخول كمدير 🔐</button>
+    <button id="logoutBtn" class="hidden">خروج</button>
+  </div>
+</header>
+
+<div id="loginModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>دخول المدير</h3>
+    <p>الباسورد: Shaarawy@2026</p>
+    <input type="password" id="passwordInput" placeholder="اكتب الباسورد">
+    <button id="loginSubmit">دخول</button>
+    <button id="closeModal" class="gray">إلغاء</button>
+    <p id="loginError"></p>
+  </div>
+</div>
+
+<main>
+  <div id="adminPanel" class="hidden card">
+    <h2>⚙️ لوحة المدير</h2>
+    <div class="row">
+      <input type="text" id="newClassName" placeholder="اسم فصل جديد - مثلا: أولى سابع">
+      <button id="addClassBtn">+ إضافة فصل</button>
+      <button id="deleteClassBtn" class="red">حذف الفصل الحالي</button>
+    </div>
+    <div class="row">
+      <input type="text" id="newPassword" placeholder="غير الباسورد">
+      <button id="changePassBtn">تغيير الباسورد</button>
+      <span>دوس على أي خانة في الجدول وعدلها، بتتحفظ لوحدها</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <label>اختر الفصل:</label>
+    <select id="classSelect"></select>
+  </div>
+
+  <div class="card">
+    <h2 id="classTitle">جدول الفصل</h2>
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>اليوم / الحصة</th>
+          <th>1</th><th>2</th><th>3</th><th>4</th>
+          <th class="break-col">☕ فسحة</th>
+          <th>5</th><th>6</th><th>7</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    </div>
+    <p class="note">الفسحة بعد الحصة الرابعة - 7 حصص في اليوم</p>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
